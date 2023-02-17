@@ -18,8 +18,6 @@ resource "aws_vpc" "hashicat" {
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
     environment = "Production"
-    Department = "devops"
-    Billable = "true"
   }
 }
 
@@ -29,6 +27,8 @@ resource "aws_subnet" "hashicat" {
 
   tags = {
     name = "${var.prefix}-subnet"
+    Department = "devops"
+    Billable = "true"
   }
 }
 
